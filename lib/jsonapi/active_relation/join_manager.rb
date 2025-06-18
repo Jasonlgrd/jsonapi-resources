@@ -94,7 +94,7 @@ module JSONAPI
           table_name = relationship.resource_klass._table_name
 
           last_join = join_sources.find { |j|
-            valid_join_types.any? { |t| j.is_a?(t) } && j.left.name == table_name
+            valid_join_types.any? { |t| j.is_a?(t) } && j.left.table_name == table_name
           }
         end
 
