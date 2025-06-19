@@ -44,6 +44,10 @@ jobs:
           - sqlite3:test_db
         exclude:
           - ruby: 3.4
+            rails: 7.0.4
+          - ruby: 3.4
+            rails: 6.1.7
+          - ruby: 3.4
             rails: 6.0.6
           - ruby: 3.4
             rails: 5.2.8.1
