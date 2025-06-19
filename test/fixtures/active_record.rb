@@ -324,11 +324,11 @@ ActiveRecord::Schema.define do
 
   create_table :related_things, force: true  do |t|
     t.string :name
-    t.references :from, references: :thing
-    t.references :to, references: :thing
 
     t.timestamps null: false
   end
+  add_reference :related_things, :from, foreign_key: { to_table: :things }
+  add_reference :related_things, :to, foreign_key: { to_table: :things }
 
   create_table :questions, force: true do |t|
     t.string :text
