@@ -52,7 +52,7 @@ ActiveRecord::Schema.define do
   end
 
   create_table :posts, force: true do |t|
-    t.string     :title, length: 255
+    t.string     :title, limit: 255
     t.text       :body
     t.integer    :author_id
     t.integer    :parent_post_id
